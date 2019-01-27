@@ -1,12 +1,12 @@
 int switchState = 0;
-Void setup() {
+void setup() {
 	pinMode(3, OUTPUT);
 	pinMode(4, OUTPUT);
 	pinMode(5, OUTPUT);
 	pinMode(2, INPUT);
 }
 
-Void loop(){
+void loop(){
 	switchState = digitalRead(2);
 	if(switchState == LOW){
 	// the button is not pressed
@@ -21,8 +21,8 @@ Void loop(){
 	digitalWrite(4, LOW);
 	digitalWrite(5, HIGH);
 
-	delay(250) // wait for a quarter seconds
-	digitalWrite(4, HIGH)
+	delay(250); // wait for a quarter seconds
+	digitalWrite(4, HIGH);
 	digitalWrite(5, LOW);
 	delay(250);
 	}
