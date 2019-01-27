@@ -1,4 +1,4 @@
-int switchState = 0;
+int switchState = 0; //code taken from https://umkc.box.com/s/1yc6o64zcg1new2bu77298jw6nydb4e7
 void setup() {
 	pinMode(3, OUTPUT);
 	pinMode(4, OUTPUT);
@@ -11,18 +11,18 @@ void loop(){
 	if(switchState == LOW){
 	// the button is not pressed
 
-	digitalWrite(3, HIGH); //green LED
+	digitalWrite(3, HIGH); //green LED is on
 	digitalWrite(4, LOW); //Red LED
 	digitalWrite(5, LOW); //red LED
 	}
 
-	else{
+	else{ //when button is pressed
 	digitalWrite(3, LOW);
 	digitalWrite(4, LOW);
-	digitalWrite(5, HIGH);
+	digitalWrite(5, HIGH); yellow LED is on
 
 	delay(250); // wait for a quarter seconds
-	digitalWrite(4, HIGH);
+	digitalWrite(4, HIGH); red LED is on
 	digitalWrite(5, LOW);
 	delay(250);
 	}
